@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+    <Properties>
+        <Property name="APP_NAME">evaluaciontecnica</Property>
+        <Property name="LOG_DIR">logs/evaluaciontecnica/v1</Property>
+        <Property name="LOG_HISTORY">logs/evaluaciontecnica/history</Property>
+        <Property name="PATTERN">{&quot;timestamp&quot;: &quot;%d{yyyy-MM-dd HH:mm:ss.SSS}&quot;, &quot;level&quot;: &quot;%p&quot;, &quot;layer&quot;: &quot;%X{LAYER}&quot;,  &quot;operation&quot;: &quot;%X{OPERATION}&quot;, &quot;traceId&quot;: &quot;%X{X-B3-TraceId}&quot;, &quot;spanId&quot;: &quot;%X{X-B3-SpanId}&quot;, &quot;parentSpanId&quot;: &quot;%X{X-B3-ParentSpanId}&quot;, &quot;message&quot;: &quot;%msg&quot;} %n</Property>
+    </Properties>
+    
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${PATTERN}" />
+        </Console>
+                
+        <Async name="Async" bufferSize="1048576"> 
+            <AppenderRef ref="console"  />
+        </Async>        
+        
+    </Appenders>
+    
+    <Loggers>
+        <Root level="info" additivity="false">
+            <AppenderRef ref="Async" />
+        </Root>      
+    </Loggers> 
+          
+</Configuration>
