@@ -22,13 +22,13 @@ Hibernate quedó configurado para que pueda recrear sus entidades en memoría, a
 
 Nos posicionamos en la carpeta raíz, en la cual se clonó el proyecto, luego:
 
-	>`$ gradle clean`
+	$ gradle clean
 
-	>`$ gradle build`
+	$ gradle build
 
 ### Arranque 
 
-	>`$ java -jar build/libs/evaluaciontecnica.jar`
+	$ java -jar build/libs/evaluaciontecnica.jar
 	
 
 Posterior al arranque, he incluido un proceso de volcado inicial de datos, básicamente incorporo algunos registros en la base de datos para que puedan ser usados al momento de evaluar la solución.  Se incluyen registros de:
